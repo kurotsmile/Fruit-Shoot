@@ -50,7 +50,9 @@ public class GameManager : MonoBehaviour {
 
 	void Start() {
 
-		this.carrot.Load_Carrot(this.check_exit_game);
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        this.carrot.Load_Carrot(this.check_exit_game);
 		this.carrot.act_after_close_all_box = this.reset_ui_game;
 		currentTime = startTime;
 
